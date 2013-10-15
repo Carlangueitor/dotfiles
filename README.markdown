@@ -1,8 +1,8 @@
 dotfiles
 ========
-# Requirements
+## Requirements
 * git
-* vim
+* vim (Only for vim configs)
 
 
 ## Install
@@ -13,5 +13,5 @@ dotfiles
 
 
 ## Disponible configs
-### `vim`
 
+* `vim`
