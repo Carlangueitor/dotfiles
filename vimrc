@@ -35,7 +35,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 " Plugins
-Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'taglist.vim'
@@ -43,18 +42,15 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'mattn/zencoding-vim'
 Bundle 'rosenfeld/conque-term'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/Pydiction'
 Bundle 'AutoComplPop'
-Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/HTML-AutoCloseTag'
 Bundle 'tristen/vim-sparkup'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'python.vim'
 
 
 " POWERLINE CONFIG "
@@ -142,3 +138,6 @@ let g:pydiction_location = "~/.vim/bundle/Pydiction/complete-dict"
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+" Session "
+"""""""""""
+let g:session_autosave='no'
