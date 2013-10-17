@@ -1,9 +1,5 @@
 dotfiles
 ========
-## Requirements
-* git
-* vim (Only for vim configs)
-
 
 ## Install
 
@@ -15,3 +11,9 @@ dotfiles
 ## Disponible configs
 
 * `vim`
+
+### Requirements
+* [exuberant-ctags](http://ctags.sourceforge.net/)
+* [powerline](https://github.com/Lokaltog/powerline/)
+* [flake8](https://bitbucket.org/tarek/flake8/wiki/Home)
+* [jshint](http://jshint.com/install/) (node package)
