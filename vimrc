@@ -96,6 +96,8 @@ nmap <C-t> :tabnew<CR>
 """"""""""""
 
 nmap <F2> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+
 
 " TAGBAR "
 """"""""""
