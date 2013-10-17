@@ -37,7 +37,6 @@ Bundle 'gmarik/vundle'
 " Plugins
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'taglist.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
@@ -97,12 +96,6 @@ nmap <C-t> :tabnew<CR>
 """"""""""""
 
 nmap <F2> :NERDTreeToggle<CR>
-
-
-" TAGLIST "
-"""""""""""
-
-nmap <F3> :TlistToggle<CR>
 
 " TAGBAR "
 """"""""""
