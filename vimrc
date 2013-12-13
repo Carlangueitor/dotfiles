@@ -121,7 +121,7 @@ set noswapfile
 set autoread
 
 " Ignore files in mru
-set wildignore+=*.pyc,*.pyo
+set wildignore+=*.pyc,*.pyo,*.jpg,*.png,*.gif
 
 " Error navigation.
 nmap tt :lnext<CR>
