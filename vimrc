@@ -50,6 +50,7 @@ Bundle 'AutoComplPop'
 Bundle 'vim-scripts/HTML-AutoCloseTag'
 Bundle 'tristen/vim-sparkup'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'mustache/vim-mustache-handlebars'
 
 
 " POWERLINE CONFIG "
@@ -121,7 +122,7 @@ set noswapfile
 set autoread
 
 " Ignore files in mru
-set wildignore+=*.pyc,*.pyo,*.jpg,*.png,*.gif
+set wildignore+=*.pyc,*.pyo,*.jpg,*.png,*.gif,static/,media/
 
 " Error navigation.
 nmap tt :lnext<CR>
