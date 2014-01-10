@@ -18,6 +18,12 @@ function setup_vim {
     vim +BundleInstall +qall
 }
 
+function setup_zsh {
+    echo "Setup ZSH Config..."
+    wget --no-check-certificate https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+    ln -s $PDW/zshrc ~/.zshrc
+}
+
 
 function main {
     hash figlet 2>/dev/null  # Checks if figlet is installed.
@@ -32,6 +38,9 @@ function main {
     do
         if [ $param == "vim" ]; then
             setup_vim
+        fi
+        if [ $param == "zsh" ]; then
+            setup_zsh
         fi
     done
 }
