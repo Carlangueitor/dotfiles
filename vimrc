@@ -79,6 +79,9 @@ set expandtab
 set ai
 set si
 
+au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
+
 " Autocomplete
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
 inoremap { {}<Esc>:let leavechar="}"<CR>i
