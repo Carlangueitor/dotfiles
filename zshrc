@@ -16,7 +16,7 @@ alias gpo='git push origin'
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git)
+plugins=(git fabric pip vagrant virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/virtualenvwrapper.sh
