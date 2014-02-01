@@ -126,7 +126,7 @@ set autoread
 
 " Ignore files in mru
 set wildignore+=*.pyc,*.pyo,*.jpg,*.png,*.gif
-set wildignore+=*/static/*,*/media/*,*/node_modules/*,*/bower_components/*,*/fonts/*
+set wildignore+=*/media/*,*/node_modules/*,*/bower_components/*,*/fonts/*
 
 " Error navigation.
 nmap tt :lnext<CR>
@@ -141,5 +141,3 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 " Session "
 """""""""""
 let g:session_autosave='no'
-
-let g:ctrlp_working_path_mode = 'c'

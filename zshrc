@@ -24,3 +24,18 @@ alias gl='git log --oneline --color'
 alias gis='git status --short'
 alias gch='git checkout'
 alias gpo='git push origin'
+
+# Vagrant
+alias v='vagrant'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant status'
+alias fv='fab vagrant'
+
+# Grunt
+alias gsr='grunt server'
+
+# Misc
+alias pm="python manage.py"
+alias fvr='fab vagrant runserver'
+alias fvl='fab vagrant liveserver'
