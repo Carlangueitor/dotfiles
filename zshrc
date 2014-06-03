@@ -39,3 +39,4 @@ alias gsr='grunt server'
 alias pm="python manage.py"
 alias fvr='fab vagrant runserver'
 alias fvl='fab vagrant liveserver'
+alias v='gvim'
