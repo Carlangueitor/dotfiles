@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 
-plugins=(git fabric pip vagrant virtualenvwrapper)
+plugins=(git fabric pip vagrant virtualenvwrapper npm bower debian gem sudo wd)
 
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -39,4 +39,4 @@ alias gsr='grunt server'
 alias pm="python manage.py"
 alias fvr='fab vagrant runserver'
 alias fvl='fab vagrant liveserver'
-alias v='gvim'
+alias vi='gvim'
