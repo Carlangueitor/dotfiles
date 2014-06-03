@@ -16,15 +16,20 @@ set cursorline
 set t_Co=256
 set encoding=utf-8
 set mouse=a
-set guifont=Source\ Code\ Pro\ Semibold\ 13
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 11
 set colorcolumn=80
 filetype off
 filetype plugin indent on
 filetype plugin on
-highlight ColorColumn ctermbg=234
+highlight ColorColumn ctermbg=234 guibg=#293739
 " Higlight current column.
 au WinLEave * set nocursorcolumn
 au WinEnter * set cursorcolumn
+
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 
 " VUNDLE CONFIG "
