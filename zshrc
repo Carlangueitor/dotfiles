@@ -36,7 +36,8 @@ alias fv='fab vagrant'
 alias gsr='grunt server'
 
 # Misc
-alias pm="python manage.py"
+alias pm='python manage.py'
 alias fvr='fab vagrant runserver'
 alias fvl='fab vagrant liveserver'
 alias vi='gvim'
+alias cc='pygmentize -g'
