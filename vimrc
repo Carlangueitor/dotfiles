@@ -56,6 +56,7 @@ Bundle 'vim-scripts/HTML-AutoCloseTag'
 Bundle 'tristen/vim-sparkup'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'othree/html5.vim'
 
 
 " POWERLINE CONFIG "
