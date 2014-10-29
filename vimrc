@@ -57,6 +57,7 @@ Bundle 'tristen/vim-sparkup'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'othree/html5.vim'
+Bundle 'fatih/vim-go'
 
 
 " POWERLINE CONFIG "
@@ -87,6 +88,7 @@ set si
 
 au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
 au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType mustache setl tabstop=2 softtabstop=2 shiftwidth=2
 
 " Autocomplete
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
