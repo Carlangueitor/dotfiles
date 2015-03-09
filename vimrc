@@ -1,151 +1,80 @@
-" Author: Charly Román                                                       "
-" Twitter: @Carlangueitor                                                    "
-" URL: http://github.com/Carlangueitor/vim-config                            "
-"                                                                            "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-" GENERAL CONFIG "
-""""""""""""""""""
+  " Required:
+  set runtimepath+=/home/charly/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('/home/charly/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
+
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
 
 syntax on
-colorscheme molokai
-set nocompatible
-set number
-set nowrap
-set cursorline
-set t_Co=256
-set encoding=utf-8
-set mouse=a
-set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 11
-set colorcolumn=80
-filetype off
-filetype plugin indent on
-filetype plugin on
-highlight ColorColumn ctermbg=234 guibg=#293739
-" Higlight current column.
-au WinLEave * set nocursorcolumn
-au WinEnter * set cursorcolumn
+colorscheme dracula
 
+set number
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-
-
-" VUNDLE CONFIG "
-"""""""""""""""""
-
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-" Plugins
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'rosenfeld/conque-term'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/Pydiction'
-Bundle 'AutoComplPop'
-Bundle 'vim-scripts/HTML-AutoCloseTag'
-Bundle 'tristen/vim-sparkup'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'othree/html5.vim'
-Bundle 'fatih/vim-go'
-
-
-" POWERLINE CONFIG "
-""""""""""""""""""""
-
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 set laststatus=2
-set noshowmode
-set fillchars+=stl:\ ,stlnc:\
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 0
+set colorcolumn=80
 
-" TYPING "
-""""""""""
+let g:airline_powerline_fonts = 1
 
-" Indent
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
-set ai
-set si
-
-au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType mustache setl tabstop=2 softtabstop=2 shiftwidth=2
-
-" Autocomplete
-inoremap ( ()<Esc>:let leavechar=")"<CR>i
-inoremap { {}<Esc>:let leavechar="}"<CR>i
-inoremap [ []<Esc>:let leavechar="]"<CR>i
-inoremap ' ''<Esc>:let leavechar="'"<CR>i
-inoremap " ""<Esc>:let leavechar='"'<CR>i
-
-" WINDOWS & TABS "
-""""""""""""""""""
-
-nmap <C-w-Left> <C-w-h>
-nmap <C-w-Right> <C-w-l>
-nmap <C-t> :tabnew<CR> 
-
-" NERDTREE "
-""""""""""""
-
-nmap <F2> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
-
-
-" TAGBAR "
-""""""""""
-nmap <F4> :TagbarToggle<CR>
-vmap <F4> :TagbarToggle<CR>
-
-" Syntastic "
-"""""""""""""
-
-" Python
-let g:syntastic_python_checkers = ["flake8"]
-let g:syntastic_python_flake8_args= "--ignore=E501,E124,E128"
-" Javascript
-let g:syntastic_javascript_checkers = ['jshint']
-
-" FILES & SAVING "
-""""""""""""""""""
 
 set nobackup
 set noswapfile
 set autoread
 
-" Ignore files in mru
-set wildignore+=*.pyc,*.pyo,*.jpg,*.png,*.gif
-set wildignore+=*/media/*,*/node_modules/*,*/bower_components/*,*/fonts/*
+au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType json setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
 
-" Error navigation.
-nmap tt :lnext<CR>
-nmap rr :lprev<CR>
-
-" Pydiction "
-"""""""""""""
-let g:pydiction_location = "~/.vim/bundle/Pydiction/complete-dict"
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-
-" Session "
-"""""""""""
-let g:session_autosave='no'
+inoremap ( ()<Esc>:let leavechar=")"<CR>i
+inoremap { {}<Esc>:let leavechar="}"<CR>i
+inoremap [ []<Esc>:let leavechar="]"<CR>i
+inoremap ' ''<Esc>:let leavechar="'"<CR>i
+inoremap " ""<Esc>:let leavechar='"'<CR>i
