@@ -23,6 +23,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
 
 
@@ -72,6 +73,8 @@ au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
 au FileType json setl tabstop=2 softtabstop=2 shiftwidth=2
 au FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2
 au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html.mustache setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html.handlebars setl tabstop=2 softtabstop=2 shiftwidth=2
 
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
 inoremap { {}<Esc>:let leavechar="}"<CR>i
