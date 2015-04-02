@@ -1,21 +1,13 @@
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+set nocompatible
 
-  " Required:
-  set runtimepath+=/home/charly/.vim/bundle/neobundle.vim/
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
-call neobundle#begin(expand('/home/charly/.vim/bundle'))
+call neobundle#begin(expand("~/.vim/bundle"))
 
-" Let NeoBundle manage NeoBundle
-" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Add or remove your Bundles here:
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
@@ -27,14 +19,11 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
 
 
-" Required:
 call neobundle#end()
 
-" Required:
 filetype plugin indent on
 
 NeoBundleCheck
-"End NeoBundle Scripts-------------------------
 
 syntax on
 colorscheme dracula
