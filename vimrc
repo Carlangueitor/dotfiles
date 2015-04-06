@@ -1,5 +1,18 @@
-set nocompatible
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               VIM Config                                    "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintained by Charly Román <charly@croman.mx>                               "
+" Compatible with Mac & Linux                                                 "
+" Part of dotfiles: https://github.com/Carlangueitor/dotfiles                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" General {{{
+set nocompatible  " Be Improved
+
+filetype plugin indent on
+" }}}
+
+" Bundle {{{
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -18,13 +31,11 @@ NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
 
-
 call neobundle#end()
-
-filetype plugin indent on
-
 NeoBundleCheck
+"}}}
 
+"GUI {{{
 syntax on
 colorscheme dracula
 
@@ -42,6 +53,7 @@ let g:airline_powerline_fonts = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+"}}}
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
