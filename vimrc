@@ -44,7 +44,6 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 set laststatus=2
 set colorcolumn=80
 
@@ -53,6 +52,14 @@ let g:airline_powerline_fonts = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+if has("gui_running")
+  if has("gui_macvim")
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+  else
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 11
+  endif
+endif
 "}}}
 
 let g:syntastic_always_populate_loc_list = 1
