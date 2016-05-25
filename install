@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ROOT_DIR=$(pwd)
+
+echo "Installing & applying VIM config"
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+ln -s $ROOT_DIR/vimrc ~/.vimrc
+~/.vim/bundle/neobundle.vim/bin/neoinstall

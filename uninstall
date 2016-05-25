@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ROOT_DIR=$(pwd)
+
+echo "Uninstalling VIM config"
+unlink ~/.vimrc
+mv ~/.vim ~/.vim_old
