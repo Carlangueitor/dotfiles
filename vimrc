@@ -8,6 +8,7 @@
 
 " General {{{
 set nocompatible  " Be Improved
+set nowrap
 
 filetype plugin indent on
 " }}}
@@ -55,7 +56,7 @@ set statusline+=%*
 
 if has("gui_running")
   if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+    set guifont=Source\ Code\ Pro\ Medium:h18
   else
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 11
   endif
