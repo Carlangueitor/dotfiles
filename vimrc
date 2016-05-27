@@ -68,22 +68,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-
 set nobackup
 set noswapfile
 set autoread
 
-au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType json setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType html.mustache setl tabstop=2 softtabstop=2 shiftwidth=2
-au FileType html.handlebars setl tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType html.mustache setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType html.handlebars setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType json setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType python setl tabstop=4 softtabstop=4 shiftwidth=4 smarttab expandtab
+au FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
 inoremap { {}<Esc>:let leavechar="}"<CR>i
