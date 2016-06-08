@@ -56,7 +56,8 @@ set statusline+=%*
 
 if has("gui_running")
   if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ Medium:h18
+    set guifont=Sauce\ Code\ Powerline:h18
+
   else
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 11
   endif
