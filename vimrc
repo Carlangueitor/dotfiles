@@ -30,7 +30,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
+NeoBundle 'dracula/vim'
 
 call neobundle#end()
 NeoBundleCheck
