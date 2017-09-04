@@ -33,6 +33,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'dracula/vim'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 call neobundle#end()
 NeoBundleCheck
