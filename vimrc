@@ -9,6 +9,8 @@
 " General {{{
 set nocompatible  " Be Improved
 set nowrap
+set modeline
+set modelines=10
 
 filetype plugin indent on
 " }}}
