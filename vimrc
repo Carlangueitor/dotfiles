@@ -12,7 +12,8 @@ set nowrap
 set modeline
 set modelines=10
 
-filetype plugin indent on
+filetype off
+
 " }}}
 
 " Bundle {{{
@@ -34,8 +35,20 @@ NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'dracula/vim'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'tmhedberg/SimpylFold'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'xolox/vim-session'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'posva/vim-vue'
+NeoBundle 'elixir-editors/vim-elixir'
+NeoBundle 'othree/xml.vim'
 
 call neobundle#end()
+
+filetype plugin indent on
+
 NeoBundleCheck
 "}}}
 
@@ -78,12 +91,16 @@ set autoread
 
 au BufRead,BufNewFile *.sls setfiletype yaml
 
+au FileType css setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
+au FileType htmldjango setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType html.mustache setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType html.handlebars setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType javascript setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType json setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType python setl tabstop=4 softtabstop=4 shiftwidth=4 smarttab expandtab
+au FileType php setl tabstop=4 softtabstop=4 shiftwidth=4 smarttab expandtab
+au FileType vue setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 
 inoremap ( ()<Esc>:let leavechar=")"<CR>i
@@ -91,3 +108,6 @@ inoremap { {}<Esc>:let leavechar="}"<CR>i
 inoremap [ []<Esc>:let leavechar="]"<CR>i
 inoremap ' ''<Esc>:let leavechar="'"<CR>i
 inoremap " ""<Esc>:let leavechar='"'<CR>i
+
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
