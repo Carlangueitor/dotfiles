@@ -44,6 +44,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'posva/vim-vue'
 NeoBundle 'elixir-editors/vim-elixir'
 NeoBundle 'othree/xml.vim'
+NeoBundle 'othree/yajs.vim'
 
 call neobundle#end()
 
@@ -90,6 +91,8 @@ set noswapfile
 set autoread
 
 au BufRead,BufNewFile *.sls setfiletype yaml
+
+set backspace=indent,eol,start
 
 au FileType css setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
 au FileType html setl tabstop=2 softtabstop=2 shiftwidth=2 smarttab expandtab
