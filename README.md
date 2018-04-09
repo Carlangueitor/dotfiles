@@ -9,3 +9,7 @@ Charly's Dotfiles.
 ## Uninstalling 
 
 * Run `./uninstall` in cloned repo
+
+
+# Testing
+TODO
