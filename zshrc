@@ -5,9 +5,28 @@ compinit
 
 autoload -U promptinit
 promptinit
-prompt adam1
+prompt spaceship
 
-HISTSIZE=4000
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stamps section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  pyenv         # Pyenv section
+  kubectl   	# Kubectl section
+  line_sep      # Line break
+  exec_time     # Execution time
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_KUBECTL_SHOW=true
+SPACESHIP_KUBECTL_VERSION_SHOW=false
+
+HISTSIZE=10000
 HISTFILE="$HOME/.zhistory"
 SAVEHIST=$HISTSIZE
 
@@ -19,12 +38,13 @@ setopt share_history
 # export EDITOR=vim
 # export VISUAL=vim
 
+# kubectl completion
+source <(kubectl completion zsh)
+
 # add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/charly/pr/loanypotless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/charly/pr/loanypotless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/charly/pr/loanypotless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/charly/pr/loanypotless/node_modules/tabtab/.completions/sls.zsh
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"

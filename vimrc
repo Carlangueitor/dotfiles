@@ -49,7 +49,6 @@ NeoBundle 'wincent/ferret'
 NeoBundle 'ambv/black'
 NeoBundle 'iamcco/markdown-preview.nvim'
 NeoBundle 'w0rp/ale'
-NeoBundle 'floobits/floobits-neovim'
 
 call neobundle#end()
 
@@ -102,9 +101,9 @@ set smartcase
 let g:ale_completion_enabled = 0
 let g:ale_open_list = 1
 
-let g:ale_linters = { 
+let g:ale_linters = {
   \'typescript': ['eslint'],
-  \} 
+  \}
 
 let g:ale_fixers = {
   \'*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -119,7 +118,7 @@ set noswapfile
 set autoread
 
 au BufRead,BufNewFile *.sls setfiletype yaml
-au BufWritePre *.py execute ':Black'
+" au BufWritePre *.py execute ':Black'
 
 set completeopt-=preview
 set backspace=indent,eol,start
