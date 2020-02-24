@@ -49,6 +49,7 @@ NeoBundle 'wincent/ferret'
 NeoBundle 'ambv/black'
 NeoBundle 'iamcco/markdown-preview.nvim'
 NeoBundle 'w0rp/ale'
+NeoBundle 'raimon49/requirements.txt.vim'
 
 call neobundle#end()
 
@@ -118,7 +119,7 @@ set noswapfile
 set autoread
 
 au BufRead,BufNewFile *.sls setfiletype yaml
-" au BufWritePre *.py execute ':Black'
+au BufWritePre *.py execute ':Black'
 
 set completeopt-=preview
 set backspace=indent,eol,start
