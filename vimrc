@@ -110,16 +110,17 @@ let g:ale_fixers = {
   \'*': ['remove_trailing_lines', 'trim_whitespace'],
   \'javascript': ['prettier'],
   \'typescript': ['prettier'],
+  \'python': ['black'],
   \}
 
 let g:ale_fix_on_save = 1
+let g:ale_python_black_options = '-l 120'
 
 set nobackup
 set noswapfile
 set autoread
 
 au BufRead,BufNewFile *.sls setfiletype yaml
-au BufWritePre *.py execute ':Black'
 
 set completeopt-=preview
 set backspace=indent,eol,start
